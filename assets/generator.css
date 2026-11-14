@@ -1,0 +1,106 @@
+/* Altus Colour Palette Generator — tool card styles.
+ * The tool sits on a WHITE card. The theme forces .page-body h2/h3 to white,
+ * so every heading inside the card is overridden below with dark colour. */
+.cpg-root { max-width: 860px; margin: 0 auto; font-family: 'Poppins', system-ui, sans-serif; }
+
+.cpg-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(8, 25, 55, 0.12);
+    padding: 34px 34px 30px;
+    color: #22334a;
+}
+
+/* HEADING COLOUR RULE: beats the theme's white .page-body h2/h3 */
+.page-body .cpg-card h2, .page-body .cpg-card h3 { color: #0f2033; }
+.cpg-card h2, .cpg-card h3 { color: #0f2033; }
+
+.cpg-badge {
+    display: inline-block; background: #e8f1ff; color: #1d4fd7;
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 14px;
+}
+.cpg-card h2.cpg-title { font-size: 30px; line-height: 1.25; margin: 0 0 10px; font-weight: 700; }
+.cpg-sub { color: #4a5d78; font-size: 15.5px; line-height: 1.65; margin: 0 0 22px; }
+
+.cpg-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+.cpg-field { display: flex; flex-direction: column; gap: 7px; }
+.cpg-field.cpg-full { grid-column: 1 / -1; }
+.cpg-label { font-size: 13.5px; font-weight: 600; color: #0f2033; }
+.cpg-opt { font-weight: 400; color: #7b8ba3; }
+.cpg-input, .cpg-select {
+    font-family: inherit; font-size: 15px; color: #0f2033;
+    border: 1.5px solid #d5deeb; border-radius: 10px; padding: 11px 13px;
+    background: #fbfdff; width: 100%; box-sizing: border-box;
+}
+.cpg-input:focus, .cpg-select:focus { outline: none; border-color: #2e6bff; box-shadow: 0 0 0 3px rgba(46,107,255,.15); }
+.cpg-color-row { display: flex; gap: 10px; align-items: stretch; }
+.cpg-swatch-input { width: 62px; height: 48px; padding: 4px; border: 1.5px solid #d5deeb; border-radius: 10px; background: #fff; cursor: pointer; flex: 0 0 auto; }
+.cpg-hex-input { flex: 1 1 auto; text-transform: lowercase; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.cpg-hint { font-size: 12.5px; color: #7b8ba3; }
+
+.cpg-btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 6px 0 4px; }
+.cpg-btn {
+    font-family: inherit; font-size: 16px; font-weight: 700; color: #fff;
+    background: linear-gradient(135deg, #2e6bff, #00c2ff);
+    border: none; border-radius: 12px; padding: 14px 30px; cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+.cpg-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(46,107,255,.35); }
+.cpg-btn-ghost {
+    font-family: inherit; font-size: 15px; font-weight: 600; color: #1d4fd7;
+    background: #eef4ff; border: 1.5px solid #c9dcff; border-radius: 12px;
+    padding: 13px 22px; cursor: pointer;
+}
+.cpg-btn-ghost:hover { background: #e0ecff; }
+
+.cpg-error {
+    background: #fdecec; color: #b3261e; border: 1px solid #f5c6c2;
+    border-radius: 10px; padding: 11px 14px; font-size: 14px; margin: 14px 0 0;
+}
+
+.cpg-results { margin-top: 26px; }
+.cpg-card h3.cpg-rh { font-size: 20px; margin: 26px 0 6px; font-weight: 700; }
+.cpg-card h3.cpg-rh:first-child { margin-top: 0; }
+.cpg-meta { color: #7b8ba3; font-size: 13.5px; margin: 0 0 14px; }
+
+.cpg-swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.cpg-swatch { border: 1px solid #e2e9f3; border-radius: 14px; overflow: hidden; background: #fff; }
+.cpg-chip { height: 86px; }
+.cpg-sinfo { padding: 10px 12px 12px; }
+.cpg-sname { font-size: 14px; font-weight: 700; color: #0f2033; }
+.cpg-suse { font-size: 12px; color: #7b8ba3; line-height: 1.45; margin: 3px 0 8px; min-height: 34px; }
+.cpg-hexrow { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cpg-hex { font-family: ui-monospace, monospace; font-size: 14.5px; font-weight: 700; color: #0f2033; letter-spacing: .5px; }
+.cpg-copy {
+    font-family: inherit; font-size: 12px; font-weight: 600; color: #1d4fd7;
+    background: #eef4ff; border: 1px solid #c9dcff; border-radius: 8px; padding: 5px 10px; cursor: pointer;
+}
+.cpg-copy:hover { background: #e0ecff; }
+.cpg-contrast { display: inline-block; margin-top: 8px; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 3px 10px; }
+.cpg-contrast.aa { background: #e6f7ee; color: #157347; }
+.cpg-contrast.aal { background: #fff4d6; color: #8a6100; }
+.cpg-contrast.dec { background: #f1f3f6; color: #7b8ba3; }
+
+.cpg-codewrap { position: relative; margin-top: 8px; }
+.cpg-code {
+    background: #0b1526; color: #d7e6ff; border-radius: 12px; padding: 18px;
+    font-family: ui-monospace, 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.7;
+    overflow-x: auto; white-space: pre; margin: 0;
+}
+.cpg-codebar { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+
+.cpg-guide { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 8px; }
+.cpg-guide li { background: #f6f9fe; border: 1px solid #e2e9f3; border-radius: 10px; padding: 10px 14px; font-size: 13.5px; color: #22334a; line-height: 1.55; }
+.cpg-guide li strong { color: #0f2033; }
+
+
+.cpg-fineprint { font-size: 12.5px; color: #8a99b0; line-height: 1.6; margin: 22px 0 0; }
+
+@media (max-width: 640px) {
+    .cpg-card { padding: 24px 18px; }
+    .cpg-card h2.cpg-title { font-size: 24px; }
+    .cpg-form { grid-template-columns: 1fr; }
+    .cpg-swatches { grid-template-columns: repeat(2, 1fr); }
+    .cpg-btn { width: 100%; }
+}
